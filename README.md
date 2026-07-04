@@ -17,7 +17,7 @@ Perform incremental data processing using Delta Lake on the Superstore dataset â
 
 | Table Name        | Layer  | Description                                                              |
 |--------------------|--------|---------------------------------------------------------------------------|
-| `superstore_bronze` | Bronze | Raw, unclean data loaded directly from `Superstore.csv`. No transformations applied â€” kept as-is for audit/reprocessing. |
+| `superstore_bronze` | Bronze | Raw, unclean data loaded directly from `Superstore.csv`. No transformations applied. |
 | `superstore_silver` | Silver | Cleaned data (nulls handled, duplicates removed, correct data types applied) and the target table for the incremental MERGE. |
 
 ### Volumes (1)
@@ -32,12 +32,6 @@ Perform incremental data processing using Delta Lake on the Superstore dataset â
 
 **Path:** `/Volumes/dlt_assignement/default/assignment_vol/RawVol`
 <img width="1157" height="317" alt="Screenshot 2026-07-02 160402" src="https://github.com/user-attachments/assets/02e45e60-ac8f-4273-9f1a-67a77c65ddc7" />
-
-
-| File Name              | Size    | Purpose                                                        |
-|-------------------------|---------|------------------------------------------------------------------|
-| `Superstore.csv`        | 2.18 MB | Original source dataset, loaded into `superstore_bronze`.       |
-| `Incremental_load.csv`  | 2.19 MB | Simulated new/incremental data â€” contains a mix of records that update existing rows and records that insert new rows into `superstore_silver`. |
 
 ---
 
